@@ -1,7 +1,7 @@
 import cv2
 import numpy as np 
 # Load the image  
-image_path = "..\\lena.png" 
+image_path = ".\\lena.png" 
 # Replace with the path to your image 
 img =   cv2.imread(image_path) 
 (width, height) = img.shape[:2]
@@ -15,8 +15,6 @@ translation_matrix = np.float32([[1, 0, 100], [0, 1, 50]]) # Translate by (100, 
 rotated_img = cv2.warpAffine(img, rotation_matrix, (width, height)) 
 scaled_img = cv2.warpAffine(img, scaling_matrix, (int(width*1.5), int(height*1.5))) 
 translated_img = cv2.warpAffine(img, translation_matrix, (width, height))
-
-
 
 
 
